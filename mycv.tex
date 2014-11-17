@@ -1,0 +1,111 @@
+%James Mueller Resume - 2014
+
+\documentclass[11pt.oneside]{article}
+\usepackage{geometry}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,rmargin=1in,lmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+
+\newcommand{\name}{James Mueller}
+\newcommand{\email}{jmuel11@gmail.com}
+\newcommand{\phone}{573-881-2018}
+
+\newcommand{\bigname}[1]{
+    \begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+\newenvironment{ressection}[1]{
+    \vspace{4pt}
+    {\fontfamily{phv}\selectfont\Large#1}
+    \begin{itemize}
+    \vspace{3pt} 
+}{
+    \end{itemize}
+}
+
+\newcommand{\resitem}[1]{
+    \vspace{-4pt}
+    \item \begin{flushleft}#1 \end{flushleft}
+}
+
+\newcommand{\ressubitem}[1]{
+    \vspace{-1pt}
+    \item \begin{flushleft}#1 \end{flushleft}
+}
+
+\newcommand{\resbigitem}[3]{
+    \vspace{-5pt}
+    \item
+    \textbf{#1}  #2 
+    \hfill
+    \textit{#3}
+}
+
+\newenvironment{ressubsec}[3]{
+    \resbigitem{#1}{#2}{#3}
+    \vspace{-2pt}
+    \begin{itemize} 
+}{
+    \end{itemize}
+}
+
+\newenvironment{reslist}[1]{
+    \resitem{\textbf{#1}}
+    \vspace{-5pt}
+    \begin{itemize}
+}{
+    \end{itemize}
+}
+
+%%%%%%%%%%Begin the actual resume%%%%%%%%%%
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+\bigname{\name}
+
+\vspace{-8pt}\rule{\textwidth}{1pt}
+
+%%\vspace{-1pt}{\small\itshape \email}
+\begin{center}
+    \small\itshape \email
+\end{center}
+\vspace{8 pt}
+
+
+\begin{ressection}{Experience}
+    \begin{ressubsec}{Carfax}{Columbia, MO}{Software Developer: May 2013 to Present}
+        \ressubitem{Technologies: Java, Groovy, Javascript, Grails, Spring, Oracle Sql, MySQL, RabbitMQ}  
+        \ressubitem{Worked as part of an agile team to deliver software to fulfill customer requirements in weekly and biweekly sprints}
+        \ressubitem{Responsible for all parts of the development process outside of hardware set up. Designed system architectures, set up message consumers and producers, designed database schemas, wrote batch processes and developed by server-side and client-side aspects of the web applications}
+        \ressubitem{A team based environment emphasized working closely with other developers in the day to day development. Heavy use of paired programming and TDD to ensure code standards were maintained}
+    \end{ressubsec}
+    \begin{ressubsec}{Amdocs}{St Louis, MO}{Software Developer: May 2012 to May 2013}
+        \ressubitem{Technologies: PHP, Javascript, MySQL}
+        \ressubitem{Worked in a waterfall environment, received prepared tickets to add features, completed the task and worked with external testers to verify that the functionality was correct}
+        \ressubitem{In the down time worked through a bug database to resolve production issues}
+    \end{ressubsec}
+\end{ressection}
+
+\begin{ressection}{Education}
+    \begin{ressubsec}{Iowa State University}{Ames, IA}{2007 to 2011}
+        \ressubitem{Completed BS in Computer Engineering}
+    \end{ressubsec}
+\end{ressection}
+
+\begin{ressection}{Skills and Interests}
+    \begin{reslist}{Computer Languages}
+        \ressubitem{\textbf{Proficient:} Java, Groovy, Oracle Sql, MySQL, Javascript, Html, CSS}
+        \ressubitem{\textbf{Familiar:} Python, PHP, MySQL, Mongo, C, C++}
+    \end{reslist}
+    \begin{reslist}{Tools}
+        \ressubitem{IntelliJ, Eclipse, SublimeText, Sql Developer, Control M, Vim}
+    \end{reslist}
+    \begin{reslist}{Interests}
+        \ressubitem{Big Data, Front End Design, Functional Programming}
+    \end{reslist}
+\end{ressection}
+
+\end{document}
